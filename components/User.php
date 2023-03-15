@@ -16,7 +16,7 @@ class User
     #[Assert\Email(), Assert\Length(['min' => 5])]
     public string $email;
 
-    #[Assert\NotBlank(), Assert\Length(['min' => 8, 'max' => 64]), Assert\Type(['type' => 'string']),]
+    #[Assert\NotBlank(), Assert\Length(['min' => 8, 'max' => 64]), Assert\Type(['type' => 'string']), ]
     public string $password;
 
     public function __construct($id, $name, $email, $password)
@@ -33,4 +33,3 @@ class User
         return $this->time;
     }
 }
-
